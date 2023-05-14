@@ -34,8 +34,8 @@ export default function NavigationBar() {
     };
 
     return (
-        <AppBar component='nav' position="static">
-            <Container maxWidth="xl">
+        <AppBar component='header' position="static">
+            <Container>
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
@@ -53,7 +53,7 @@ export default function NavigationBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Zorritos Page
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -110,9 +110,9 @@ export default function NavigationBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Zorritos Page
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end', gap: '1rem' } }}>
                         {pages.map((page) => (
                             <Link
                                 underline="none"

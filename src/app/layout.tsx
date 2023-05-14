@@ -26,7 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className} >
         <NavigationBar />
-        <Container>
+        <Container component="main" sx={{
+          marginTop: "1rem",
+          display: "flex",
+          flexFlow: "column nowrap",
+          gap: "1rem"
+        }}>
           {children}
         </Container>
 
