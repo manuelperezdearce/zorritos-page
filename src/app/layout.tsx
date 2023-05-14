@@ -1,7 +1,16 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+'use client'
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
+import { Roboto } from 'next/font/google';
+
+import { Container } from '@mui/material';
+import NavigationBar from '../components/NavigationBar';
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className} >
+        <NavigationBar />
+        <Container>
+          {children}
+        </Container>
+
+      </body>
     </html>
   )
 }
